@@ -1,0 +1,18 @@
+<Alloy>
+		<View id="header">
+
+			<View id="leftButton" class="button">
+				<Label id="leftButtonImg" />
+			</View>
+			
+			<Label id="headerTitle" />
+			
+			<View id="rightButton" class="button">
+				<Label id="rightButtonImg" />
+			</View>
+			
+			<View id="separator"/>
+			
+		</View>
+
+</Alloy>
