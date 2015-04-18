@@ -1,0 +1,50 @@
+".container" : {
+	backgroundColor:"blue"
+}
+
+"#viewSelection" : {
+	top : Alloy.CFG.headerHeight,
+	backgroundColor : Alloy.CFG.appColor2,
+	height : "40dp",
+	borderColor : Alloy.CFG.appColor8
+}
+
+"#leftIcon" : {
+	height : "100%",
+	width : "50%",
+	backgroundColor : Alloy.CFG.appColor2,
+	left : 0,
+}
+
+"#mapIcon" : {
+	color: "white",
+	font: {
+		fontFamily : Alloy.CFG.iconFont,
+		fontSize : "24dp"
+	},
+	text : "\ue600"
+}
+
+"#rightIcon" : {
+	height : "100%",
+	width : "50%",
+	backgroundColor : Alloy.CFG.appColor,
+	right : 0,
+	borderColor : Alloy.CFG.appColor8
+}
+
+"#mesIcon" : {
+	color: "white",
+	font: {
+		fontFamily : Alloy.CFG.iconFont,
+		fontSize : "24dp"
+	},
+	text : "\ue603"
+}
+
+//Map
+"#webMap" : {
+	top : "100dp",
+	//url : "https://cristy646.cartodb.com/viz/25b8e6fe-b546-11e4-81cd-0e4fddd5de28/embed_map"
+	url : "https://liconoc.cartodb.com/viz/690de0b0-e5a4-11e4-8916-0e9d821ea90d/embed_map"
+}
