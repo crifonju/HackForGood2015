@@ -1,0 +1,18 @@
+<Alloy>
+	<Window class="container">
+		
+		<Require id="header" src="header" />
+		
+		<View id="viewSelection">
+			<View id="leftIcon">
+				<Label id="mapIcon" />
+			</View>
+			<View id="rightIcon">
+				<Label id="mesIcon" />
+			</View>
+		</View> 
+	
+		<WebView id="webMap"></WebView>
+		
+	</Window>
+</Alloy>
