@@ -1,0 +1,50 @@
+<Alloy>
+	<Window id="win">
+		<View class="container">
+			
+			<Require id="header" src="header" />
+			
+			<ScrollView id="scroll">
+				
+				<ListView id="list">
+					<ListSection>
+					<ListItem title="Avinguda de Fernando Abril Martorell, 2"></ListItem>
+		            <ListItem title="Avinguda d'Ausias March, 107"></ListItem>
+		            <ListItem title="Carrer de Cadis, 66"></ListItem>
+		            <ListItem title="Carrer del Mestre Aguilar, 26-28"></ListItem>
+		            <ListItem title="Carrer del Brasil, 31"></ListItem>
+		            <ListItem title="Avenida Blasco Ibañez, 23"></ListItem>
+		            <ListItem title="Carretera Malilla, 117"></ListItem>
+		            <ListItem title="Avinguda dels Germans Machado, 137"></ListItem>
+		            <ListItem title="Carrer de Sant Vicent Martir, 128-130"></ListItem>
+		            <ListItem title="Carrer de Jesus, 98-100"></ListItem>
+		            <ListItem title="Carrer de les Tres Forques, 58"></ListItem>
+		            <ListItem title="Carrer d'Aiora, 21-23"></ListItem>
+		            <ListItem title="Carrer de l'Arxiduc Carles, 41"></ListItem>
+		            <ListItem title="Carrer de Fontanars dels Alforins, 64"></ListItem>
+		            <ListItem title="Carrer de Xiva, 27"></ListItem>
+		            <ListItem title="Carrer d'Enguera, 35"></ListItem>
+		            <ListItem title="Carrer de l'Arxiduc Carles, 60"></ListItem>
+		            <ListItem title="Carrer de les Tres Forques, 96"></ListItem>
+        		    <ListItem title="Avinguda de les Balears, 62"></ListItem>
+		            <ListItem title="Carrer de Menorca, 5203"></ListItem>
+		            <ListItem title="Carrer d'Alfauir, 7"></ListItem>
+		            <ListItem title="Avinguda de les Tres Creus, 79"></ListItem>
+		            <ListItem title="Avinguda de Burjassot, 250"></ListItem>
+		            <ListItem title="Avinguda de Catalunya, 15"></ListItem>
+		            <ListItem title="Carrer de la Reina, 286"></ListItem>
+		            <ListItem title="Carrer del Doctor Lluch, 293"></ListItem>
+		            <ListItem title="Carrer del Comte de Lumiares, 24"></ListItem>
+		            <ListItem title="Avinguda de les Corts Valencianes, 28-30"></ListItem>
+		            <ListItem title="Avinguda dels Germans Machado, 79"></ListItem>
+		            <ListItem title="Avinguda de les Tres Creus, 8"></ListItem>
+		            <ListItem title="Avinguda de les Balears, 66"></ListItem>
+		            <ListItem title="Pont de les Arts, 32"></ListItem>
+		            </ListSection>
+				</ListView>
+				
+			</ScrollView>
+			
+		</View>
+	</Window>
+</Alloy>
