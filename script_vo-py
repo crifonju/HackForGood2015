@@ -1,0 +1,82 @@
+import csv
+import urllib2
+import time
+fecha=time.strftime("%d/%m/%Y")
+hora=time.strftime("%H")
+timestr = time.strftime("%d-%m-%Y_%H-%M-%S")
+
+url_clima = 'http://www.aemet.es/es/eltiempo/observacion/ultimosdatos_8416Y_datos-horarios.csv?k=val&l=8416Y&datos=det&w=0&f=temperatura&x='
+response_clima = urllib2.urlopen(url_clima)
+cr_clima = csv.reader(response_clima)
+
+url_trafico = 'http://mapas.valencia.es/lanzadera/opendata/tra_espiras_p/CSV'
+response_trafico = urllib2.urlopen(url_trafico)
+cr_trafico = csv.reader(response_trafico)
+
+archivo = csv.writer(open("contaminacion.csv", "wb"))
+archivo.writerow(["idpm","latitud","longitud","nombre_via","ih","temperatura","velocidad_viento","precipitacion","humedad","PM25","CO","NO","NO2"])
+
+historico = csv.writer(open("contaminacion_"+timestr+".csv", "wb"))
+historico.writerow(["idpm","latitud","longitud","nombre_via","ih","temperatura","velocidad_viento","precipitacion","humedad","PM25","CO","NO","NO2"])
+
+for row in cr_clima:
+    if len(row)!=0:
+        if row[0].find('/')!=-1:
+            fecha_clima=row[0].split()
+            hora_clima=fecha_clima[1].split(":")
+            if hora==0:                
+                if int(hora_clima[0])==23:
+                    fecha_dia=fecha.split("/")
+                    dia=fecha_dia[0]
+                    fecha_dia_clima=fecha_clima[0].split("/")
+                    dia_clima=fecha_dia_clima[0]
+                    if dia==dia_clima-1:
+                        fila_clima=row
+                   
+            else:
+                 if int(hora_clima[0])==int(hora)-1:
+                    if fecha_clima[0]==fecha:
+                        fila_clima=row
+
+Temperatura=float(fila_clima[1])
+VelocidadViento=int(fila_clima[2])
+Precipitacion=float(fila_clima[6])
+Humedad=int(fila_clima[9])
+
+for row in cr_trafico:
+    fila=row[0].split(";")
+    if fila[0]!="X":
+        if len(fila)==7:
+            if fila[3].find('-')!=-1:
+                if fila[4].find(':')!=-1:
+                    latitud=fila[1]
+                    longitud=fila[0]
+                    idpm=fila[5]
+                    VehiculosHora=int(fila[6])
+
+                    ##CALCULOS CONTAMINANTES##
+                    
+                    PM25=(-0.0737*Temperatura)+(0.1468*Humedad)+(-0.2967*VelocidadViento)+(-1.4599*Precipitacion)+(0.0034*VehiculosHora)-0.0451
+                             
+                    CO=(-0.0069*Temperatura)+(0.0012*Humedad)+(-0.0061*VelocidadViento)+(-0.0311*Precipitacion)+(0.0001*VehiculosHora)+0.2484
+                              
+                    NO=(-1.3916*Temperatura)+(0.1117*Humedad)+(-1.8441*VelocidadViento)+(-5.6811*Precipitacion)+(0.049*VehiculosHora)+26.547 
+
+                    NO2=(-0.3048*Temperatura)+(-0.0456*Humedad)+(-2.4617*VelocidadViento)+(0.0457*VehiculosHora)+42.5011
+                    
+                    ##########################
+
+                    with open('espiras_calles.csv', 'rb') as csvfile:
+                        spamreader = csv.reader(csvfile, delimiter=',')
+                        for row in spamreader:
+                            if row[0]==idpm:
+                                calle=row[3]
+
+                    archivo.writerow([idpm,latitud,longitud,calle,VehiculosHora,Temperatura,VelocidadViento,Precipitacion,Humedad,PM25,CO,NO,NO2])
+                    historico.writerow([idpm,latitud,longitud,calle,VehiculosHora,Temperatura,VelocidadViento,Precipitacion,Humedad,PM25,CO,NO,NO2])
+                            
+                            
+                        
+                        
+
+
