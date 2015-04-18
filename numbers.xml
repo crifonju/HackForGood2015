@@ -1,0 +1,70 @@
+<Alloy>
+	<Window id="win">
+		<View class="container">
+			
+			<Require id="header" src="header" />
+			
+			<View id="viewSelection">
+				<View id="leftIcon">
+					<Label id="mapIcon" />
+				</View>
+				<View id="rightIcon">
+					<Label id="mesIcon" />
+				</View>
+			</View>
+			
+			<ScrollView id="scroll">
+				
+				<View id="picker">
+					<Label id="pickerText" />
+					<Label id="pickerIcon" />
+				</View>
+				
+				<!-- <WebView id="webMetro"></WebView> -->
+				
+				<View id="velocimetro">
+					<Label id="veloTitle" />
+					<ImageView id="veloImg"></ImageView>
+					<Label id="alertIcon" />
+				</View>
+				
+				<View id="datos">
+					<View id="left">
+						<Label id="PM" class="tipoLeft" />
+						<Label id="CO" class="tipoLeft" />
+						<Label id="NO" class="tipoLeft" />
+						<Label id="NO2" class="tipoLeft" />
+					</View> 
+					
+					<View id="right">
+						<View id="backPM">
+							<View id="frontPM" />
+						</View>
+						<View id="backCO">
+							<View id="frontCO" />
+						</View>
+						<View id="backNO">
+							<View id="frontNO" />
+						</View>
+						<View id="backNO2">
+							<View id="frontNO2" />
+						</View>
+					</View>
+			
+				</View>
+				
+				<View class="separator" />
+				
+				<View id="explicacion">
+					<Label id="title" />
+					<Label id="texto1" />
+					<Label id="texto2" />
+					<Label id="texto3" />
+					<Label id="texto4" />
+				</View>
+				
+			</ScrollView>
+			
+		</View>
+	</Window>
+</Alloy>
