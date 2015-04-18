@@ -1,0 +1,65 @@
+"#header" : {
+	backgroundColor: Alloy.CFG.appColor,
+	height: Alloy.CFG.headerHeight,
+	top: 0,
+	viewShadowColor : "#bebebe",
+	viewShadowOffset : {x: 0, y: 0.2},
+	viewShadowRadius : 2
+}
+
+"#separator[platform=ios]" : {
+	height : 0
+}
+
+"#separator[platform=android]" : {
+	height : "2dp",
+	backgroundColor : "#bebebe",
+	bottom : 0
+} 
+
+"#leftButtonImg" : {
+	left: "18dp",
+	color: "white",
+	font: {
+		fontFamily : Alloy.CFG.iconFont,
+		fontSize : "20dp"
+	},
+	top : "50%"
+}
+
+"#headerTitle" : {
+	color: "#FFF",
+	minimumFontSize : "12dp",
+	width : "auto",
+	font: {
+		fontFamily : Alloy.CFG.boldFont,
+		fontSize: "18dp"
+	},
+	bottom: "16dp",
+	top : "50%"
+}
+
+"#rightButtonImg" : {
+	right: "18dp",
+	color: "white",
+	font: {
+		fontFamily : Alloy.CFG.iconFont,
+		fontSize : "22dp"
+	},
+	top : "50%"
+}
+
+"#leftButton" : {
+	left: 0,
+	width: "20%"
+	// touchEnabled: false,
+	// visible: false
+}
+
+"#rightButton" : {
+	right: 0,
+	width: "20%"
+	// touchEnabled: false,
+	// visible: false
+}
+
