@@ -1,0 +1,293 @@
+".container" : {
+	backgroundColor:"white"
+}
+
+"#viewSelection" : {
+	top : Alloy.CFG.headerHeight,
+	backgroundColor : Alloy.CFG.appColor2,
+	height : "40dp",
+	borderColor : Alloy.CFG.appColor8
+}
+
+"#leftIcon" : {
+	height : "100%",
+	width : "50%",
+	backgroundColor : Alloy.CFG.appColor,
+	left : 0,
+}
+
+"#mapIcon" : {
+	color: "white",
+	font: {
+		fontFamily : Alloy.CFG.iconFont,
+		fontSize : "24dp"
+	},
+	text : "\ue600"
+}
+
+"#rightIcon" : {
+	height : "100%",
+	width : "50%",
+	backgroundColor : Alloy.CFG.appColor2,
+	right : 0,
+	borderColor : Alloy.CFG.appColor8
+}
+
+"#mesIcon" : {
+	color: "white",
+	font: {
+		fontFamily : Alloy.CFG.iconFont,
+		fontSize : "24dp"
+	},
+	text : "\ue603"
+}
+
+"#scroll" : {
+	top : "100dp",
+	layout : "vertical"
+}
+
+//SearchBar
+"#picker" : {
+	top : "2%",
+	height : "34dp",
+	width : "75%",
+	borderColor : Alloy.CFG.appColor8,
+	borderRadius : 6
+}
+
+"#pickerText" : {
+	left : "12dp",
+	color: Alloy.CFG.appColor8,
+	font: {
+		fontFamily : Alloy.CFG.regularFont,
+		fontSize : "14dp"
+	},
+	text : "Calle Colón"
+}
+
+"#pickerIcon" : {
+	right : "12dp",
+	color: Alloy.CFG.appColor8,
+	font: {
+		fontFamily : Alloy.CFG.iconFont,
+		fontSize : "20p"
+	},
+	text : "\ue601"
+}
+
+//Velocimetros
+".separator" : {
+	backgroundColor : Alloy.CFG.appColor6,
+	width : "90%",
+	height : "0.5dp",
+	top : "1%"
+}
+
+"#webMetro" : {
+	url : "https://cristy646.cartodb.com/viz/25b8e6fe-b546-11e4-81cd-0e4fddd5de28/embed_map"
+}
+
+"#velocimetro" : {
+	top : "2%",
+	height : "160dp",
+	width : "100%"
+}
+
+"#veloTitle" : {
+	top : 0,
+	color: Alloy.CFG.appColor6,
+	font: {
+		fontFamily : Alloy.CFG.boldFont,
+		fontSize : "18p"
+	},
+	text : "Calle Colón"
+}
+
+"#veloImg" : {
+	bottom : 0,
+	width : "40%",
+	image : "/images/verde.png"
+}
+
+"#alertIcon" : {
+	right : "22dp",
+	bottom : 0,
+	color: Alloy.CFG.appColor8,
+	font: {
+		fontFamily : Alloy.CFG.iconFont,
+		fontSize : "18p"
+	},
+	text : "\ue606"
+}
+
+//Datos
+"#datos" : {
+	top : "2%",
+	height : "90dp",
+	width : "100%"
+}
+
+"#left" : {
+	width : "49%",
+	left : 0,
+	height : "100%",
+	layout : "vertical"
+}
+
+"#right" : {
+	width : "49%",
+	right : "22dp",
+	height : "100%",
+	layout : "vertical"
+}
+
+".tipoLeft" : {
+	right : "22dp",
+	color: Alloy.CFG.appColor6,
+	font: {
+		fontFamily : Alloy.CFG.regularFont,
+		fontSize : "14p"
+	}
+}
+
+"#PM" : {
+	top : "2%",
+	text : "PM 2.5:"
+}
+"#CO" : {
+	top : "2%",
+	text : "CO:"
+}
+"#NO" : {
+	top : "2%",
+	text : "NO:"
+}
+"#NO2" : {
+	top : "2%",
+	text : "NO2:"
+}
+
+"#backPM" : {
+	top : "7%",
+	height : "12dp",
+	width : "50%",
+	left : 0,
+	backgroundColor : Alloy.CFG.appColor,
+	borderRadius : 6
+}
+
+"#frontPM" : {
+	height : "12dp",
+	width : "38%",
+	left : 0,
+	backgroundColor : Alloy.CFG.appColor2,
+	borderRadius : 6
+}
+
+"#backCO" : {
+	top : "9%",
+	height : "12dp",
+	width : "50%",
+	left : 0,
+	backgroundColor : Alloy.CFG.appColor,
+	borderRadius : 6
+}
+
+"#frontCO" : {
+	height : "12dp",
+	width : "3%",
+	left : 0,
+	backgroundColor : Alloy.CFG.appColor2,
+	borderRadius : 6
+}
+"#backNO" : {
+	top : "11%",
+	height : "12dp",
+	width : "50%",
+	left : 0,
+	backgroundColor : Alloy.CFG.appColor,
+	borderRadius : 6
+}
+
+"#frontNO" : {
+	height : "12dp",
+	width : "17%",
+	left : 0,
+	backgroundColor : Alloy.CFG.appColor2,
+	borderRadius : 6
+}
+"#backNO2" : {
+	top : "11%",
+	height : "12dp",
+	width : "50%",
+	left : 0,
+	backgroundColor : Alloy.CFG.appColor,
+	borderRadius : 6
+}
+
+"#frontNO2" : {
+	height : "12dp",
+	width : "26%",
+	left : 0,
+	backgroundColor : Alloy.CFG.appColor2,
+	borderRadius : 6
+}
+
+//Explicacion
+"#explicacion" : {
+	top : "2%",
+	height : Titanium.UI.SIZE,
+	width : "90%",
+	layout : "vertical"
+}
+
+"#title" : {
+	top : 0,
+	color: Alloy.CFG.appColor6,
+	font: {
+		fontFamily : Alloy.CFG.boldFont,
+		fontSize : "18p"
+	},
+	text : "¿Qué significa esto?"
+}
+
+"#texto1" : {
+	top : "2%",
+	color: Alloy.CFG.appColor6,
+	font: {
+		fontFamily : Alloy.CFG.regularFont,
+		fontSize : "12p"
+	},
+	text : "PM 2.5: Se trata de partículas que están suspendidas en el aire. Se originan sobretodo en la combustión de los motores de los vehículos. Son  muy peligrosas, al ser microscópicas pueden acceder a lo más profundo de los pulmones, en incluso al torrente sanguíneo."
+}
+
+"#texto2" : {
+	top : "2%",
+	color: Alloy.CFG.appColor6,
+	font: {
+		fontFamily : Alloy.CFG.regularFont,
+		fontSize : "12p"
+	},
+	text : "NO: Monóxido de nitrógeno. Compuesto altamente inestable. Respirar este compuesto  incrementa las posibilidades de cáncer en el organismo."
+}
+
+"#texto3" : {
+	top : "2%",
+	color: Alloy.CFG.appColor6,
+	font: {
+		fontFamily : Alloy.CFG.regularFont,
+		fontSize : "12p"
+	},
+	text : "NO2: Dióxido de nitrógeno. En reacción con el agua se convierte en un ácido. Respirar este compuesto favorece enfermedades e infecciones pulmonares, y puede provocar tos, irritación, y disminución de la capacidad pulmonar."
+}
+
+"#texto4" : {
+	top : "2%",
+	color: Alloy.CFG.appColor6,
+	font: {
+		fontFamily : Alloy.CFG.regularFont,
+		fontSize : "12p"
+	},
+	text : "CO: Compuesto extremadamente peligroso. Sustituye al oxigeno en la sangre, por lo que respirarlo, incluso en concentraciones bajas, puede suponer un peligro importante. "
+}
